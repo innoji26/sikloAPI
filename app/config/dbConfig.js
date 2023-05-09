@@ -1,5 +1,5 @@
 require('dotenv').config();
-const config = {
+module.exports = {
   host: process.env.MYSQLHOST,
   user: process.env.MYSQLUSER,
   pass: process.env.MYSQLPASSWORD,
@@ -13,5 +13,3 @@ const config = {
     idle: 10000,
   },
 };
-
-module.exports = config;
