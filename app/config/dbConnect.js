@@ -12,6 +12,11 @@ const database = new Sequelize(config.db, config.user, config.pass, {
     acquire: config.pool.acquire,
     idle: config.pool.idle,
   },
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: true,
+    },
+  },
 });
 
 const db = {};
