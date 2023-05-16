@@ -12,6 +12,9 @@ const database = new Sequelize(config.db, config.user, config.pass, {
     acquire: config.pool.acquire,
     idle: config.pool.idle,
   },
+  dialectOptions: {
+    connectTimeout: 60000 // increase connection timeout to 60 seconds
+  },
 });
 
 const db = {};
